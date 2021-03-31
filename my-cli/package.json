@@ -1,0 +1,17 @@
+{
+	"name": "my-cli",
+	"version": "1.0.0",
+	"description": "",
+	"bin": "./cmd.js",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"type": "module",
+	"dependencies": {
+		"got": "^11.8.2"
+	}
+}

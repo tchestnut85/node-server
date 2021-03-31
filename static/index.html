@@ -1,56 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script type="module" src="app.js"></script>
+		<link rel="stylesheet" href="./style.css" />
+		<title>Product App</title>
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="module" src="app.js"></script>
-    <style>
-        body {
-            background: #fad8d8
-        }
-    </style>
-    <title>File App</title>
-</head>
+	<body>
+		<nav>
+			<select name="" id="category">
+				<option value="" hidden>Select Category</option>
+				<option value="electronics">Electronics</option>
+				<option value="confectionary">Confectionary</option>
+			</select>
+		</nav>
+		<hr />
+		<div id="products"></div>
 
-<body>
-    <nav>
-        <select name="" id="category">
-            <option value="" hidden>Select Category</option>
-            <option value="electronics">Electronics</option>
-            <option value="confectionary">Confectionary</option>
-        </select>
-    </nav>
-    <hr>
-    <div id="products"></div>
-    <template id="item">
-        <style>
-            details {
-                font-size: 1.5em;
-            }
+		<form id="add">
+			<input type="text" name="name" required placeholder="name" />
+			<input
+				type="number"
+				name="rrp"
+				placeholder="rrp"
+				step="0.01"
+				required
+			/>
+			<input type="text" name="info" placeholder="info" required />
+			<button type="submit">Add Item</button>
+		</form>
 
-            summary {
-                cursor: pointer;
-            }
-
-            p {
-                text-indent: 1.5rem;
-            }
-        </style>
-        <details>
-            <summary>
-                <strong>
-                    <slot name="name"></slot>
-                </strong> - <em>
-                    <slot name="rrp"></slot>
-                </em>
-            </summary>
-            <p>
-                <slot name="info"></slot>
-            </p>
-        </details>
-    </template>
-</body>
-
+		<template id="item">
+			<style>
+				details {
+					font-size: 1.5em;
+				}
+				summary {
+					cursor: pointer;
+				}
+				p {
+					text-indent: 1.5rem;
+				}
+			</style>
+			<details>
+				<summary>
+					<strong><slot name="name"></slot></strong> -
+					<em><slot name="rrp"></slot></em>
+					<small>[Orders: <slot name="orders">pending</slot>]</small>
+				</summary>
+				<p><slot name="info"></slot></p>
+			</details>
+		</template>
+	</body>
 </html>

@@ -1,0 +1,32 @@
+* {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+	background: lightsteelblue;
+}
+
+#add {
+	margin-top: 1em;
+	width: 20rem;
+	/* display: none; */
+}
+
+#add input {
+	margin-bottom: 0.5em;
+}
+
+[name='name'],
+[name='rrp'] {
+	width: calc(10rem - 2px);
+}
+
+[name='info'] {
+	width: 20rem;
+}
+
+#add button {
+	font-weight: bold;
+	width: 5em;
+	float: right;
+}
