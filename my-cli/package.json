@@ -12,6 +12,10 @@
 	"license": "ISC",
 	"type": "module",
 	"dependencies": {
-		"got": "^11.8.2"
+		"ansi-escapes": "^4.3.2",
+		"chalk": "^4.1.0",
+		"enquirer": "^2.3.6",
+		"got": "^11.8.2",
+		"minimist": "^1.2.5"
 	}
 }
